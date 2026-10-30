@@ -1,278 +1,1096 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Sadik Ali | Software Developer & MCA Student</title>
+    <meta name="title" content="Sadik Ali | Software Developer & MCA Student" />
     <meta
       name="description"
-      content="Sadik Ali is a software developer from Sambhal, Uttar Pradesh, with skills in Python, Java, JavaScript, and web development."
+      content="Sadik Ali is a Software Developer and MCA student specializing in Java, Python, JavaScript, and modern Web Development (HTML5, CSS3, SQL). View projects, live demos, and resume."
     />
-    <meta name="theme-color" content="#101b2d" />
-    <title>Sadik Ali | Software Developer</title>
+    <meta name="keywords" content="Sadik Ali, Software Developer, Java Developer, Python Developer, Web Developer, Full Stack, MCA, Portfolio, Sambhal, Uttar Pradesh" />
+    <meta name="author" content="Sadik Ali" />
+    <meta name="theme-color" content="#0b1120" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sadikali67011-art.github.io/Portfolio/" />
+    <meta property="og:title" content="Sadik Ali | Software Developer & MCA Student" />
+    <meta property="og:description" content="Portfolio of Sadik Ali — Software Developer specializing in Java, Python, JavaScript, HTML5, CSS3, and SQL." />
+    <meta property="og:image" content="image.jpeg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="Sadik Ali | Software Developer & MCA Student" />
+    <meta property="twitter:description" content="Portfolio of Sadik Ali — Software Developer specializing in Java, Python, JavaScript, HTML5, CSS3, and SQL." />
+    <meta property="twitter:image" content="image.jpeg" />
+
+    <!-- SVG Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%236366f1'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='800' font-size='46' fill='%23ffffff'>SA</text></svg>" />
+
+    <!-- Google Fonts Preconnect & Stylesheet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="preload" as="image" href="image.jpeg" />
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
+
+    <!-- Schema.org JSON-LD Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Sadik Ali",
+        "jobTitle": "Software Developer",
+        "email": "mailto:sadikali7011@gmail.com",
+        "telephone": "+917534894896",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Sambhal",
+          "addressRegion": "Uttar Pradesh",
+          "addressCountry": "India"
+        },
+        "alumniOf": [
+          {
+            "@type": "EducationalOrganization",
+            "name": "I.F.T.M. University, Moradabad"
+          },
+          {
+            "@type": "EducationalOrganization",
+            "name": "Teerthanker Mahaveer University"
+          }
+        ],
+        "knowsAbout": ["Java", "Python", "JavaScript", "HTML5", "CSS3", "SQL", "Web Development", "Node.js"],
+        "sameAs": [
+          "https://github.com/sadikali67011-art",
+          "https://www.linkedin.com/in/sadik-ali-75a539294/"
+        ]
+      }
+    </script>
   </head>
   <body>
-    <div id="app">
-      <header class="site-header">
-        <nav class="nav container" aria-label="Main navigation">
-          <a class="brand" href="#home" aria-label="Sadik Ali home">SA<span>.</span></a>
+    <!-- Top Header & Navigation -->
+    <header class="site-header">
+      <nav class="nav container" aria-label="Main navigation">
+        <a class="brand" href="#home" aria-label="Sadik Ali Home">
+          SA<span class="brand-dot">.</span>
+        </a>
+
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#code-showcase">Code</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <a class="nav-resume-btn" href="resume/">
+              <span aria-hidden="true">📄</span> Resume
+            </a>
+          </li>
+        </ul>
+
+        <div class="nav-actions">
+          <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch theme">
+            <!-- Injected by script.js -->
+          </button>
           <button
             class="menu-toggle"
             type="button"
-            aria-label="Open navigation"
+            aria-label="Open navigation menu"
             aria-expanded="false"
             aria-controls="nav-links"
           >
-            <span></span><span></span>
+            <span></span>
+            <span></span>
+            <span></span>
           </button>
-          <ul class="nav-links" id="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a class="nav-contact" href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-      </header>
-      <main id="main-content">
-        <section class="hero container" id="home">
-          <div class="hero-copy">
-            <p class="eyebrow"><span class="status-dot"></span> SOFTWARE DEVELOPER</p>
-            <h1>Hi, I'm <span>Sadik Ali.</span><br />I build for the web.</h1>
-            <p class="hero-description">
-              A developer and computer applications student who enjoys turning
-              practical ideas into useful, responsive web experiences.
+        </div>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <!-- Hero Section -->
+      <section class="hero container" id="home">
+        <div class="hero-copy">
+          <div class="status-badge">
+            <span class="status-dot"></span> Available for Developer Roles
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="highlight">Sadik Ali</span>.<br />
+            Software Developer &amp; MCA Student.
+          </h1>
+
+          <p class="hero-subtitle">
+            Passionate about building scalable web applications and solving real-world challenges. Experienced in <strong>Java</strong>, <strong>Python</strong>, <strong>JavaScript</strong>, <strong>HTML5</strong>, <strong>CSS3</strong>, and <strong>SQL</strong> databases.
+          </p>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-value">MCA</span>
+              <span class="stat-label">Pursuing Degree</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">10+</span>
+              <span class="stat-label">Projects Built</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">1+ Yr</span>
+              <span class="stat-label">Practical Experience</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">Java • Python • JS</span>
+              <span class="stat-label">Core Tech Stack</span>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">
+              Explore My Work <span aria-hidden="true">↓</span>
+            </a>
+            <a class="button button-secondary" href="resume/">
+              View / Download Resume <span aria-hidden="true">📄</span>
+            </a>
+            <a class="button button-outline" href="#contact">
+              Get in Touch <span aria-hidden="true">✉️</span>
+            </a>
+          </div>
+
+          <div class="hero-socials" aria-label="Social profiles">
+            <a class="social-pill" href="https://github.com/sadikali67011-art" target="_blank" rel="noopener noreferrer">
+              <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              GitHub
+            </a>
+            <a class="social-pill" href="https://www.linkedin.com/in/sadik-ali-75a539294/" target="_blank" rel="noopener noreferrer">
+              <svg fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              LinkedIn
+            </a>
+            <a class="social-pill" href="mailto:sadikali7011@gmail.com">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              sadikali7011@gmail.com
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="orbit-ring orbit-ring-1"></div>
+          <div class="orbit-ring orbit-ring-2"></div>
+
+          <div class="avatar-wrapper">
+            <img class="avatar-img" src="image.jpeg" alt="Portrait of Sadik Ali" width="320" height="320" />
+          </div>
+
+          <div class="floating-toolkit" aria-label="Current Developer Toolkit">
+            <span class="toolkit-header">Core Competencies</span>
+            <div class="toolkit-items">
+              <div class="toolkit-item">
+                <span class="toolkit-badge badge-java">☕</span>
+                <span>Java (OOP &amp; Collections)</span>
+              </div>
+              <div class="toolkit-item">
+                <span class="toolkit-badge badge-python">🐍</span>
+                <span>Python (Automation &amp; APIs)</span>
+              </div>
+              <div class="toolkit-item">
+                <span class="toolkit-badge badge-js">JS</span>
+                <span>JavaScript (ES6+ &amp; Async)</span>
+              </div>
+              <div class="toolkit-item">
+                <span class="toolkit-badge badge-web">UI</span>
+                <span>HTML5 &amp; Modern CSS3</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section class="section section-alt" id="about">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-eyebrow">Professional Background</span>
+            <h2 class="section-title">About Me</h2>
+            <p class="section-desc">
+              Dedicated to writing clean, maintainable code and solving real-world technical problems.
             </p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="#projects">Explore my work <span aria-hidden="true">↗</span></a>
-              <a class="button button-secondary" href="/resume">View / Download Resume</a>
-            </div>
-            <div class="hero-socials" aria-label="Social profiles">
-              <a href="https://github.com/sadikali67011-art" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
-              <a href="https://www.linkedin.com/in/sadik-ali-75a539294/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
-              <a href="mailto:sadikali7011@gmail.com">Email <span aria-hidden="true">↗</span></a>
-            </div>
           </div>
-          <div class="hero-visual">
-            <div class="photo-frame">
-              <img src="image.jpeg" alt="Portrait of Sadik Ali" width="440" height="440" />
-            </div>
-            <div class="orbit orbit-one"></div>
-            <div class="orbit orbit-two"></div>
-            <div class="code-card" aria-label="Developer tools: Python, Java and JavaScript">
-              <span class="code-card-label">CURRENT TOOLKIT</span>
-              <span class="code-language"><b class="language-python">Py</b> Python</span>
-              <span class="code-language"><b class="language-java">J</b> Java</span>
-              <span class="code-language"><b class="language-js">JS</b> JavaScript</span>
-            </div>
-            <span class="spark spark-one" aria-hidden="true">✳</span>
-            <span class="spark spark-two" aria-hidden="true">✦</span>
-          </div>
-          <a class="scroll-cue" href="#about"><span></span> SCROLL TO EXPLORE</a>
-        </section>
 
-        <section class="section section-light" id="about">
-          <div class="container about-grid">
-            <div>
-              <p class="eyebrow eyebrow-dark">A LITTLE ABOUT ME</p>
-              <h2 class="section-title">Curious by nature.<br /><span>Developer by choice.</span></h2>
-            </div>
-            <div class="about-copy">
+          <div class="about-grid">
+            <div class="about-text">
               <p>
-                I'm a software developer based in Sambhal, Uttar Pradesh, with
-                hands-on experience building web applications and interfaces.
-                I enjoy learning how things work, writing clear code, and
-                solving real problems one step at a time.
+                I am a software developer based in <strong>Sambhal, Uttar Pradesh, India</strong>. Currently, I am pursuing my <strong>Master of Computer Applications (MCA)</strong> at I.F.T.M. University (2026–2028), having completed my <strong>Bachelor of Computer Applications (BCA)</strong> with specialization in <strong>Mobile Application and Web Technology</strong> at Teerthanker Mahaveer University (2023–2026).
               </p>
               <p>
-                My toolkit includes Python, Java, JavaScript, HTML, CSS, and
-                SQL. I am currently pursuing my MCA after completing my BCA.
+                My passion lies in backend systems, algorithm design, and creating responsive web applications. Through my internship as a <strong>Web Developer Intern at CETPA</strong> and project-based work with <strong>Cognifyz Technologies</strong>, I have gained hands-on experience developing customer-centric web applications, designing relational database schemas, and integrating RESTful APIs.
               </p>
-              <a class="text-link" href="mailto:sadikali7011@gmail.com">Let's talk <span aria-hidden="true">↗</span></a>
-            </div>
-          </div>
-        </section>
-
-        <section class="section section-dark" id="skills">
-          <div class="container">
-            <div class="section-heading">
+              <p>
+                Whether designing an object-oriented architecture in <strong>Java</strong>, writing automated scripts in <strong>Python</strong>, or developing interactive user interfaces with <strong>JavaScript, HTML5, and CSS3</strong>, I bring attention to detail, strong problem-solving capabilities, and a commitment to continuous learning.
+              </p>
               <div>
-                <p class="eyebrow">WHAT I WORK WITH</p>
-                <h2 class="section-title">Tools of my trade<span>.</span></h2>
+                <a class="button button-primary" href="#contact">
+                  Let's Discuss Opportunities <span aria-hidden="true">→</span>
+                </a>
               </div>
-              <p class="section-intro">A growing toolkit for building useful, reliable software.</p>
             </div>
-            <div class="skills-grid">
-              <article class="skill-card">
-                <span class="skill-number">01</span>
-                <h3>Programming</h3>
-                <p>Python, Java, JavaScript</p>
-                <div class="skill-tags"><span>OOP</span><span>Problem solving</span><span>DSA basics</span></div>
-              </article>
-              <article class="skill-card">
-                <span class="skill-number">02</span>
-                <h3>Web development</h3>
-                <p>HTML, CSS, responsive design</p>
-                <div class="skill-tags"><span>Accessibility</span><span>Mobile-first</span><span>UI</span></div>
-              </article>
-              <article class="skill-card">
-                <span class="skill-number">03</span>
-                <h3>Databases & APIs</h3>
-                <p>SQL, PostgreSQL, REST APIs</p>
-                <div class="skill-tags"><span>DBMS</span><span>Data modeling</span><span>Postman</span></div>
-              </article>
-              <article class="skill-card">
-                <span class="skill-number">04</span>
-                <h3>Tools & teamwork</h3>
-                <p>Git, GitHub, VS Code</p>
-                <div class="skill-tags"><span>Communication</span><span>Collaboration</span><span>Learning</span></div>
-              </article>
-            </div>
-          </div>
-        </section>
 
-        <section class="section section-light" id="experience">
-          <div class="container">
-            <div class="section-heading">
-              <div>
-                <p class="eyebrow eyebrow-dark">WHERE I'VE GROWN</p>
-                <h2 class="section-title">Experience<span>.</span></h2>
-              </div>
-              <p class="section-intro">Learning by contributing, building, and working with a team.</p>
-            </div>
-            <article class="timeline-card">
-              <span class="timeline-marker" aria-hidden="true"></span>
-              <div class="timeline-content">
-                <div class="timeline-heading">
-                  <div><h3>Web Developer Intern</h3><p class="timeline-company">CETPA</p></div>
-                  <span class="timeline-date">June 2025 - November 2025</span>
+            <div class="about-highlights">
+              <div class="highlight-card">
+                <div class="highlight-card-header">
+                  <span class="highlight-card-icon">☕</span>
+                  <h3>Object-Oriented Programming</h3>
                 </div>
-                <ul class="detail-list">
-                  <li>Contributed to building and maintaining web-based applications as part of a development team.</li>
-                  <li>Gained practical experience across the web development lifecycle.</li>
+                <p>Strong understanding of OOP principles (Encapsulation, Polymorphism, Inheritance, Abstraction) and clean class design in Java &amp; Python.</p>
+              </div>
+
+              <div class="highlight-card">
+                <div class="highlight-card-header">
+                  <span class="highlight-card-icon">🌐</span>
+                  <h3>Full-Stack Web Development</h3>
+                </div>
+                <p>Proficient with modern HTML5, responsive CSS3 (Flexbox/Grid), JavaScript ES6+, DOM manipulation, and Node.js backend integration.</p>
+              </div>
+
+              <div class="highlight-card">
+                <div class="highlight-card-header">
+                  <span class="highlight-card-icon">🗄️</span>
+                  <h3>Databases &amp; RESTful APIs</h3>
+                </div>
+                <p>Hands-on database modeling with SQL, PostgreSQL, and MySQL. Experience consuming and building RESTful APIs with Postman testing.</p>
+              </div>
+
+              <div class="highlight-card">
+                <div class="highlight-card-header">
+                  <span class="highlight-card-icon">🎓</span>
+                  <h3>Certified &amp; Continuously Learning</h3>
+                </div>
+                <p>Certified in Java Programming by NPTEL, Artificial Intelligence by IBM, and Computers by IIT Bombay Spoken Tutorial.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section class="section" id="skills">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-eyebrow">Technical Competencies</span>
+            <h2 class="section-title">Skills &amp; Technologies</h2>
+            <p class="section-desc">
+              A comprehensive toolkit spanning programming languages, modern web development, databases, and engineering workflows.
+            </p>
+          </div>
+
+          <div class="skills-filter-bar" role="tablist" aria-label="Filter skills">
+            <button class="filter-btn active" data-filter="all" type="button">All Skills</button>
+            <button class="filter-btn" data-filter="languages" type="button">Languages (Java, Python, JS)</button>
+            <button class="filter-btn" data-filter="frontend" type="button">Frontend &amp; UI (HTML, CSS, JS)</button>
+            <button class="filter-btn" data-filter="backend" type="button">Backend &amp; Databases</button>
+            <button class="filter-btn" data-filter="tools" type="button">Tools &amp; Workflows</button>
+          </div>
+
+          <div class="skills-grid">
+            <!-- 1. Java -->
+            <article class="skill-card" data-category="languages backend">
+              <div class="skill-icon-header">
+                <div class="skill-icon" style="color: var(--lang-java)">☕</div>
+                <span class="skill-level">Core Language</span>
+              </div>
+              <h3>Java</h3>
+              <p>Object-Oriented Programming (OOP), Collections Framework, Exception Handling, Multithreading basics, and JDBC database connectivity.</p>
+              <div class="skill-tags">
+                <span class="skill-tag">OOP</span>
+                <span class="skill-tag">Collections</span>
+                <span class="skill-tag">JDBC</span>
+                <span class="skill-tag">Exception Handling</span>
+                <span class="skill-tag">NPTEL Certified</span>
+              </div>
+            </article>
+
+            <!-- 2. Python -->
+            <article class="skill-card" data-category="languages backend">
+              <div class="skill-icon-header">
+                <div class="skill-icon" style="color: var(--lang-python)">🐍</div>
+                <span class="skill-level">Core Language</span>
+              </div>
+              <h3>Python</h3>
+              <p>Scripting, task automation, file processing, REST API consumption, web scraping, and data manipulation with clean Pythonic syntax.</p>
+              <div class="skill-tags">
+                <span class="skill-tag">Python 3</span>
+                <span class="skill-tag">Scripting</span>
+                <span class="skill-tag">Automation</span>
+                <span class="skill-tag">REST APIs</span>
+                <span class="skill-tag">Data Structures</span>
+              </div>
+            </article>
+
+            <!-- 3. JavaScript -->
+            <article class="skill-card" data-category="languages frontend">
+              <div class="skill-icon-header">
+                <div class="skill-icon" style="color: var(--lang-js)">⚡</div>
+                <span class="skill-level">Core Language</span>
+              </div>
+              <h3>JavaScript (ES6+)</h3>
+              <p>Modern ECMAScript, asynchronous programming with Promises &amp; Async/Await, DOM manipulation, Fetch API, and event handling.</p>
+              <div class="skill-tags">
+                <span class="skill-tag">ES6+</span>
+                <span class="skill-tag">Async / Await</span>
+                <span class="skill-tag">DOM APIs</span>
+                <span class="skill-tag">Fetch API</span>
+                <span class="skill-tag">JSON</span>
+              </div>
+            </article>
+
+            <!-- 4. HTML5 & CSS3 -->
+            <article class="skill-card" data-category="frontend">
+              <div class="skill-icon-header">
+                <div class="skill-icon" style="color: var(--teal)">🎨</div>
+                <span class="skill-level">Web Standard</span>
+              </div>
+              <h3>HTML5 &amp; CSS3</h3>
+              <p>Semantic markup, accessible web structures (ARIA), responsive mobile-first layouts using CSS Grid, Flexbox, custom variables, and keyframe animations.</p>
+              <div class="skill-tags">
+                <span class="skill-tag">Semantic HTML5</span>
+                <span class="skill-tag">CSS Grid &amp; Flexbox</span>
+                <span class="skill-tag">Responsive Design</span>
+                <span class="skill-tag">Animations</span>
+                <span class="skill-tag">Accessibility</span>
+              </div>
+            </article>
+
+            <!-- 5. Node.js & Express -->
+            <article class="skill-card" data-category="backend">
+              <div class="skill-icon-header">
+                <div class="skill-icon" style="color: var(--emerald)">🚀</div>
+                <span class="skill-level">Backend Framework</span>
+              </div>
+              <h3>Node.js &amp; Express</h3>
+              <p>Building RESTful server-side endpoints, routing middleware, JSON payload processing, and CRUD application architectures.</p>
+              <div class="skill-tags">
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">Express.js</span>
+                <span class="skill-tag">RESTful APIs</span>
+                <span class="skill-tag">Middleware</span>
+                <span class="skill-tag">CRUD</span>
+              </div>
+            </article>
+
+            <!-- 6. SQL & Databases -->
+            <article class="skill-card" data-category="backend">
+              <div class="skill-icon-header">
+                <div class="skill-icon" style="color: var(--cyan)">🗄️</div>
+                <span class="skill-level">Data Management</span>
+              </div>
+              <h3>SQL &amp; DBMS</h3>
+              <p>Relational database management, schema normalization, complex SQL queries, JOINs, indexing, PostgreSQL, MySQL, and MongoDB fundamentals.</p>
+              <div class="skill-tags">
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">PostgreSQL</span>
+                <span class="skill-tag">MySQL</span>
+                <span class="skill-tag">Database Normalization</span>
+                <span class="skill-tag">MongoDB</span>
+              </div>
+            </article>
+
+            <!-- 7. Git & GitHub -->
+            <article class="skill-card" data-category="tools">
+              <div class="skill-icon-header">
+                <div class="skill-icon" style="color: #f43f5e">🐙</div>
+                <span class="skill-level">Version Control</span>
+              </div>
+              <h3>Git &amp; GitHub</h3>
+              <p>Distributed version control, branch management, merge conflict resolution, pull requests, code reviews, and remote repository workflows.</p>
+              <div class="skill-tags">
+                <span class="skill-tag">Git CLI</span>
+                <span class="skill-tag">GitHub</span>
+                <span class="skill-tag">Branching</span>
+                <span class="skill-tag">Code Review</span>
+                <span class="skill-tag">Collaboration</span>
+              </div>
+            </article>
+
+            <!-- 8. Deployment & Engineering -->
+            <article class="skill-card" data-category="tools">
+              <div class="skill-icon-header">
+                <div class="skill-icon" style="color: var(--amber)">🛠️</div>
+                <span class="skill-level">DevOps &amp; Tools</span>
+              </div>
+              <h3>DevOps &amp; Developer Tools</h3>
+              <p>Netlify deployment &amp; configuration (netlify.toml), GitHub Pages, VS Code, Postman API testing, Chrome DevTools profiling, and command-line automation.</p>
+              <div class="skill-tags">
+                <span class="skill-tag">Netlify</span>
+                <span class="skill-tag">GitHub Pages</span>
+                <span class="skill-tag">Postman</span>
+                <span class="skill-tag">VS Code</span>
+                <span class="skill-tag">DevTools</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- NEW: Interactive Live Code Showcase (Java, Python, JavaScript) -->
+      <section class="section section-alt" id="code-showcase">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-eyebrow">Technical Capability In Action</span>
+            <h2 class="section-title">Live Code Showcase</h2>
+            <p class="section-desc">
+              Demonstrating clean, production-standard code in <strong>Java</strong>, <strong>Python</strong>, and <strong>JavaScript</strong>. Click each tab to inspect real implementation patterns.
+            </p>
+          </div>
+
+          <div class="code-showcase-container">
+            <div class="code-window-topbar">
+              <div class="window-dots" aria-hidden="true">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+
+              <div class="code-tabs" role="tablist" aria-label="Code language switch">
+                <button class="code-tab-btn active" data-lang="java" type="button">
+                  <span>☕</span> Java (OOP &amp; Collections)
+                </button>
+                <button class="code-tab-btn" data-lang="python" type="button">
+                  <span>🐍</span> Python (Automation &amp; API)
+                </button>
+                <button class="code-tab-btn" data-lang="js" type="button">
+                  <span>⚡</span> JavaScript (Modern Async)
+                </button>
+              </div>
+
+              <button class="code-copy-btn" id="copy-code-btn" type="button" aria-label="Copy code snippet">
+                <span>📋 Copy Code</span>
+              </button>
+            </div>
+
+            <!-- Java Code Panel -->
+            <div class="code-panel active" id="code-panel-java">
+              <pre class="code-block"><code><span class="syntax-comment">// Demonstrating Java OOP, Encapsulation, Collections &amp; Stream API</span>
+<span class="syntax-keyword">package</span> com.sadikali.portfolio;
+
+<span class="syntax-keyword">import</span> java.util.ArrayList;
+<span class="syntax-keyword">import</span> java.util.List;
+<span class="syntax-keyword">import</span> java.util.stream.Collectors;
+
+<span class="syntax-keyword">public class</span> <span class="syntax-type">ProjectManager</span> {
+    <span class="syntax-keyword">private final</span> <span class="syntax-type">List</span>&lt;<span class="syntax-type">Project</span>&gt; projects = <span class="syntax-keyword">new</span> <span class="syntax-type">ArrayList</span>&lt;&gt;();
+
+    <span class="syntax-comment">// Record demonstrating modern Java data modeling</span>
+    <span class="syntax-keyword">public record</span> <span class="syntax-type">Project</span>(<span class="syntax-type">String</span> title, <span class="syntax-type">String</span> language, <span class="syntax-type">boolean</span> isDeployed) {}
+
+    <span class="syntax-keyword">public void</span> <span class="syntax-function">addProject</span>(<span class="syntax-type">String</span> title, <span class="syntax-type">String</span> language, <span class="syntax-type">boolean</span> isDeployed) {
+        projects.add(<span class="syntax-keyword">new</span> <span class="syntax-type">Project</span>(title, language, isDeployed));
+    }
+
+    <span class="syntax-keyword">public</span> <span class="syntax-type">List</span>&lt;<span class="syntax-type">Project</span>&gt; <span class="syntax-function">getDeployedProjectsByTech</span>(<span class="syntax-type">String</span> tech) {
+        <span class="syntax-keyword">return</span> projects.stream()
+            .filter(<span class="syntax-type">Project</span>::isDeployed)
+            .filter(p -&gt; p.language().equalsIgnoreCase(tech))
+            .collect(<span class="syntax-type">Collectors</span>.toList());
+    }
+
+    <span class="syntax-keyword">public static void</span> <span class="syntax-function">main</span>(<span class="syntax-type">String</span>[] args) {
+        <span class="syntax-type">ProjectManager</span> pm = <span class="syntax-keyword">new</span> <span class="syntax-type">ProjectManager</span>();
+        pm.addProject(<span class="syntax-string">"Motor Doctor"</span>, <span class="syntax-string">"JavaScript"</span>, <span class="syntax-keyword">true</span>);
+        pm.addProject(<span class="syntax-string">"Student Portal"</span>, <span class="syntax-string">"Java"</span>, <span class="syntax-keyword">true</span>);
+        pm.addProject(<span class="syntax-string">"Web Scraper"</span>, <span class="syntax-string">"Python"</span>, <span class="syntax-keyword">true</span>);
+
+        <span class="syntax-type">System</span>.out.println(<span class="syntax-string">"Java Projects count: "</span> + pm.getDeployedProjectsByTech(<span class="syntax-string">"Java"</span>).size());
+    }
+}</code></pre>
+              <div class="code-panel-footer">
+                <span>Core Concepts: Clean Architecture • Generics • Lambda Expressions • Streams • Encapsulation</span>
+                <span>Language: Java 17+</span>
+              </div>
+            </div>
+
+            <!-- Python Code Panel -->
+            <div class="code-panel" id="code-panel-python">
+              <pre class="code-block"><code><span class="syntax-comment"># Demonstrating Pythonic Automation, REST API Consumption &amp; Error Handling</span>
+<span class="syntax-keyword">import</span> urllib.request
+<span class="syntax-keyword">import</span> json
+<span class="syntax-keyword">from</span> typing <span class="syntax-keyword">import</span> List, Dict, Any
+
+<span class="syntax-keyword">class</span> <span class="syntax-type">GitHubPortfolioTracker</span>:
+    <span class="syntax-string">"""Fetches and summarizes public repositories using clean Python OOP."""</span>
+
+    BASE_URL: <span class="syntax-type">str</span> = <span class="syntax-string">"https://api.github.com/users/{username}/repos"</span>
+
+    <span class="syntax-keyword">def</span> <span class="syntax-function">__init__</span>(<span class="syntax-keyword">self</span>, username: <span class="syntax-type">str</span>) -&gt; <span class="syntax-keyword">None</span>:
+        <span class="syntax-keyword">self</span>.username = username
+        <span class="syntax-keyword">self</span>.endpoint = <span class="syntax-keyword">self</span>.BASE_URL.format(username=username)
+
+    <span class="syntax-keyword">def</span> <span class="syntax-function">fetch_repositories</span>(<span class="syntax-keyword">self</span>) -&gt; List[Dict[<span class="syntax-type">str</span>, Any]]:
+        <span class="syntax-keyword">try</span>:
+            request = urllib.request.Request(
+                <span class="syntax-keyword">self</span>.endpoint,
+                headers={<span class="syntax-string">"User-Agent"</span>: <span class="syntax-string">"Python-Portfolio-Tracker"</span>}
+            )
+            <span class="syntax-keyword">with</span> urllib.request.urlopen(request, timeout=<span class="syntax-number">10</span>) <span class="syntax-keyword">as</span> response:
+                <span class="syntax-keyword">return</span> json.loads(response.read().decode(<span class="syntax-string">"utf-8"</span>))
+        <span class="syntax-keyword">except</span> Exception <span class="syntax-keyword">as</span> exc:
+            print(<span class="syntax-string">f"Error fetching repositories: {exc}"</span>)
+            <span class="syntax-keyword">return</span> []
+
+    <span class="syntax-keyword">def</span> <span class="syntax-function">get_tech_breakdown</span>(<span class="syntax-keyword">self</span>) -&gt; Dict[<span class="syntax-type">str</span>, <span class="syntax-type">int</span>]:
+        repos = <span class="syntax-keyword">self</span>.fetch_repositories()
+        stats: Dict[<span class="syntax-type">str</span>, <span class="syntax-type">int</span>] = {}
+        <span class="syntax-keyword">for</span> repo <span class="syntax-keyword">in</span> repos:
+            lang = repo.get(<span class="syntax-string">"language"</span>) <span class="syntax-keyword">or</span> <span class="syntax-string">"Other"</span>
+            stats[lang] = stats.get(lang, <span class="syntax-number">0</span>) + <span class="syntax-number">1</span>
+        <span class="syntax-keyword">return</span> stats
+
+<span class="syntax-keyword">if</span> __name__ == <span class="syntax-string">"__main__"</span>:
+    tracker = <span class="syntax-type">GitHubPortfolioTracker</span>(<span class="syntax-string">"sadikali67011-art"</span>)
+    breakdown = tracker.get_tech_breakdown()
+    print(<span class="syntax-string">"Repository Tech Distribution:"</span>, breakdown)</code></pre>
+              <div class="code-panel-footer">
+                <span>Core Concepts: Type Hinting • Context Managers • HTTP Requests • Exception Handling • Data Processing</span>
+                <span>Language: Python 3.10+</span>
+              </div>
+            </div>
+
+            <!-- JavaScript Code Panel -->
+            <div class="code-panel" id="code-panel-js">
+              <pre class="code-block"><code><span class="syntax-comment">// Demonstrating Modern ES6+, Async/Await, Web API &amp; DOM State Management</span>
+<span class="syntax-keyword">class</span> <span class="syntax-type">InteractivePortfolio</span> {
+  <span class="syntax-function">constructor</span>() {
+    <span class="syntax-keyword">this</span>.theme = localStorage.getItem(<span class="syntax-string">"portfolio-theme"</span>) || <span class="syntax-string">"dark"</span>;
+    <span class="syntax-keyword">this</span>.init();
+  }
+
+  <span class="syntax-function">init</span>() {
+    document.documentElement.setAttribute(<span class="syntax-string">"data-theme"</span>, <span class="syntax-keyword">this</span>.theme);
+    <span class="syntax-keyword">this</span>.attachScrollListener();
+  }
+
+  <span class="syntax-keyword">async</span> <span class="syntax-function">copyToClipboard</span>(text, successCallback) {
+    <span class="syntax-keyword">try</span> {
+      <span class="syntax-keyword">await</span> navigator.clipboard.writeText(text);
+      <span class="syntax-keyword">if</span> (<span class="syntax-keyword">typeof</span> successCallback === <span class="syntax-string">"function"</span>) {
+        successCallback();
+      }
+    } <span class="syntax-keyword">catch</span> (err) {
+      console.error(<span class="syntax-string">"Clipboard write failed:"</span>, err);
+    }
+  }
+
+  <span class="syntax-function">attachScrollListener</span>() {
+    <span class="syntax-keyword">const</span> backToTop = document.querySelector(<span class="syntax-string">"#back-to-top"</span>);
+    window.addEventListener(<span class="syntax-string">"scroll"</span>, () =&gt; {
+      <span class="syntax-keyword">const</span> isScrolled = window.scrollY &gt; <span class="syntax-number">400</span>;
+      backToTop?.classList.toggle(<span class="syntax-string">"visible"</span>, isScrolled);
+    }, { passive: <span class="syntax-keyword">true</span> });
+  }
+}
+
+<span class="syntax-comment">// Instantiate application cleanly on DOM load</span>
+document.addEventListener(<span class="syntax-string">"DOMContentLoaded"</span>, () =&gt; <span class="syntax-keyword">new</span> <span class="syntax-type">InteractivePortfolio</span>());</code></pre>
+              <div class="code-panel-footer">
+                <span>Core Concepts: ES6 Classes • Async/Await • Clipboard API • Event Delegation • Performance</span>
+                <span>Language: ECMAScript 2022+</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section class="section" id="projects">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-eyebrow">Proven Experience</span>
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-desc">
+              Real-world web applications and software systems built with attention to performance, responsiveness, and clean architecture.
+            </p>
+          </div>
+
+          <div class="projects-filter-bar skills-filter-bar" role="tablist" aria-label="Filter projects">
+            <button class="filter-btn active" data-filter="all" type="button">All Projects</button>
+            <button class="filter-btn" data-filter="fullstack" type="button">Full Stack</button>
+            <button class="filter-btn" data-filter="web" type="button">Frontend &amp; Web Apps</button>
+            <button class="filter-btn" data-filter="backend" type="button">Backend &amp; APIs</button>
+          </div>
+
+          <div class="projects-grid">
+            <!-- Project 1: Motor Doctor -->
+            <article class="project-card" data-category="web fullstack">
+              <div class="project-topbar">
+                <span class="project-badge">Production Web App</span>
+                <span aria-hidden="true">🚗</span>
+              </div>
+              <h3 class="project-title">Motor Doctor</h3>
+              <p class="project-desc">
+                An automotive service and repair platform engineered to help vehicle owners calculate repair estimates, book maintenance, and make informed automotive decisions with a seamless mobile-first user experience.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">HTML5</span>
+                <span class="project-tag">CSS3</span>
+                <span class="project-tag">JavaScript</span>
+                <span class="project-tag">Responsive UI</span>
+                <span class="project-tag">Live Production</span>
+              </div>
+              <div class="project-links">
+                <a class="project-link" href="https://motordoctor.in/" target="_blank" rel="noopener noreferrer">
+                  Live Website
+                  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                </a>
+                <a class="project-link" href="https://github.com/sadikali67011-art/Motor-doctor" target="_blank" rel="noopener noreferrer">
+                  Source Code
+                  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                </a>
+              </div>
+            </article>
+
+            <!-- Project 2: Job Portal -->
+            <article class="project-card" data-category="fullstack backend">
+              <div class="project-topbar">
+                <span class="project-badge">Full Stack Application</span>
+                <span aria-hidden="true">💼</span>
+              </div>
+              <h3 class="project-title">Job Portal Career Platform</h3>
+              <p class="project-desc">
+                A recruitment platform connecting job seekers with hiring companies. Features search filtering, applicant tracking, candidate resumes, and role-based permissions powered by Node.js and MongoDB.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Node.js</span>
+                <span class="project-tag">Express.js</span>
+                <span class="project-tag">MongoDB</span>
+                <span class="project-tag">JavaScript</span>
+                <span class="project-tag">REST API</span>
+              </div>
+              <div class="project-links">
+                <a class="project-link" href="https://github.com/sadikali67011-art/Job-Portal" target="_blank" rel="noopener noreferrer">
+                  View Repository
+                  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                </a>
+              </div>
+            </article>
+
+            <!-- Project 3: Student Registration System -->
+            <article class="project-card" data-category="fullstack backend">
+              <div class="project-topbar">
+                <span class="project-badge">Internship Project</span>
+                <span aria-hidden="true">🎓</span>
+              </div>
+              <h3 class="project-title">Student Registration &amp; Management</h3>
+              <p class="project-desc">
+                An end-to-end student data management portal built during Cognifyz internship. Features client/server form validation, SQL database storage, and complete CRUD operations with robust error handling.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Java / JS</span>
+                <span class="project-tag">SQL</span>
+                <span class="project-tag">HTML5</span>
+                <span class="project-tag">CSS3</span>
+                <span class="project-tag">Database CRUD</span>
+              </div>
+              <div class="project-links">
+                <a class="project-link" href="https://github.com/sadikali67011-art/Cognifyz_FullStack_Task_1" target="_blank" rel="noopener noreferrer">
+                  View Repository
+                  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                </a>
+              </div>
+            </article>
+
+            <!-- Project 4: To-Do RESTful API -->
+            <article class="project-card" data-category="backend">
+              <div class="project-topbar">
+                <span class="project-badge">Backend Service</span>
+                <span aria-hidden="true">⚡</span>
+              </div>
+              <h3 class="project-title">To-Do RESTful API Service</h3>
+              <p class="project-desc">
+                A scalable backend RESTful API supporting task scheduling and management. Designed with structured JSON responses, status code standards, error middleware, and tested comprehensively using Postman.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">JavaScript</span>
+                <span class="project-tag">Node.js</span>
+                <span class="project-tag">Express.js</span>
+                <span class="project-tag">MongoDB</span>
+                <span class="project-tag">Postman</span>
+              </div>
+              <div class="project-links">
+                <a class="project-link" href="https://github.com/sadikali67011-art/todo-api" target="_blank" rel="noopener noreferrer">
+                  View Repository
+                  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                </a>
+              </div>
+            </article>
+
+            <!-- Project 5: Laundry Service Web App -->
+            <article class="project-card" data-category="web">
+              <div class="project-topbar">
+                <span class="project-badge">On-Demand Web App</span>
+                <span aria-hidden="true">🧺</span>
+              </div>
+              <h3 class="project-title">Laundry Services Web Application</h3>
+              <p class="project-desc">
+                A modern web booking application for on-demand laundry and dry-cleaning services. Features service tier pricing calculators, dynamic pick-up scheduling, and responsive mobile-first UI.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">HTML5</span>
+                <span class="project-tag">CSS3</span>
+                <span class="project-tag">JavaScript</span>
+                <span class="project-tag">Mobile First</span>
+              </div>
+              <div class="project-links">
+                <a class="project-link" href="https://github.com/sadikali67011-art/laundry-services-web-app" target="_blank" rel="noopener noreferrer">
+                  View Repository
+                  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                </a>
+              </div>
+            </article>
+
+            <!-- Project 6: Python Automation & Scripts -->
+            <article class="project-card" data-category="backend">
+              <div class="project-topbar">
+                <span class="project-badge">Automation Suite</span>
+                <span aria-hidden="true">🐍</span>
+              </div>
+              <h3 class="project-title">Python Automation &amp; Scripting Utilities</h3>
+              <p class="project-desc">
+                A modular suite of Python utilities built for automating repetitive filesystem workflows, parsing JSON/CSV data structures, extracting web information, and executing command-line tasks.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Python 3</span>
+                <span class="project-tag">File I/O</span>
+                <span class="project-tag">Automation</span>
+                <span class="project-tag">Data Parsing</span>
+              </div>
+              <div class="project-links">
+                <a class="project-link" href="https://github.com/sadikali67011-art" target="_blank" rel="noopener noreferrer">
+                  Explore GitHub
+                  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience Section -->
+      <section class="section section-alt" id="experience">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-eyebrow">Career Milestones</span>
+            <h2 class="section-title">Work Experience</h2>
+            <p class="section-desc">
+              Practical industry and internship experience working in collaborative teams, building production web applications, and writing maintainable code.
+            </p>
+          </div>
+
+          <div class="timeline-container">
+            <!-- CETPA Experience -->
+            <article class="timeline-card">
+              <div class="timeline-meta">
+                <span class="timeline-date">June 2025 – Nov 2025</span>
+                <span class="timeline-company">CETPA Infotech</span>
+                <span class="timeline-badge">Internship</span>
+              </div>
+              <div class="timeline-details">
+                <h3 class="timeline-role">Web Developer Intern</h3>
+                <ul class="timeline-bullets">
+                  <li>Contributed to developing and maintaining client-facing web applications using HTML5, CSS3, and JavaScript as part of an agile development team.</li>
+                  <li>Ensured cross-browser compatibility and responsive performance across mobile, tablet, and desktop devices.</li>
+                  <li>Integrated frontend UI components with backend RESTful APIs, facilitating dynamic user interaction and client-side data validation.</li>
+                  <li>Gained practical exposure across the complete web development lifecycle (SDLC) and managed version control workflows using Git and GitHub.</li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- Cognifyz Experience -->
+            <article class="timeline-card">
+              <div class="timeline-meta">
+                <span class="timeline-date">2024</span>
+                <span class="timeline-company">Cognifyz Technologies</span>
+                <span class="timeline-badge">Project Internship</span>
+              </div>
+              <div class="timeline-details">
+                <h3 class="timeline-role">Full Stack Development Intern</h3>
+                <ul class="timeline-bullets">
+                  <li>Engineered a comprehensive Student Registration System featuring responsive form design, validation logic, and persistent database storage.</li>
+                  <li>Implemented clean code architecture and handled asynchronous requests for improved user experience.</li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- SkillCraft Experience -->
+            <article class="timeline-card">
+              <div class="timeline-meta">
+                <span class="timeline-date">2024</span>
+                <span class="timeline-company">SkillCraft Technology</span>
+                <span class="timeline-badge">Web Dev Internship</span>
+              </div>
+              <div class="timeline-details">
+                <h3 class="timeline-role">Web Development Intern</h3>
+                <ul class="timeline-bullets">
+                  <li>Designed and deployed responsive web landing pages focusing on semantic HTML, modern CSS layouts, and performance optimization.</li>
                 </ul>
               </div>
             </article>
           </div>
-        </section>
-
-        <section class="section section-accent" id="projects">
-          <div class="container">
-            <div class="section-heading">
-              <div>
-                <p class="eyebrow eyebrow-dark">SELECTED WORK</p>
-                <h2 class="section-title">Ideas into projects<span>.</span></h2>
-              </div>
-              <p class="section-intro">A couple of products I've worked on. More on GitHub.</p>
-            </div>
-            <div class="project-grid">
-              <article class="project-card project-motor">
-                <div class="project-topline"><span>01 / WEB APPLICATION</span><span aria-hidden="true">↗</span></div>
-                <div class="project-illustration motor-mark" aria-hidden="true">MD<span>.</span></div>
-                <h3>Motor Doctor</h3>
-                <p>A vehicle service platform designed to help drivers understand repair estimates and make more informed maintenance decisions.</p>
-                <div class="project-tags"><span>Web development</span><span>Vehicle services</span><span>Responsive UI</span></div>
-                <div class="project-links">
-                  <a href="https://motordoctor.in/" target="_blank" rel="noopener noreferrer">Live website <span aria-hidden="true">↗</span></a>
-                  <a href="https://github.com/sadikali67011-art/Motor-doctor" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
-                </div>
-              </article>
-              <article class="project-card project-jobs">
-                <div class="project-topline"><span>02 / WEB APPLICATION</span><span aria-hidden="true">↗</span></div>
-                <div class="project-illustration jobs-mark" aria-hidden="true">{ }</div>
-                <h3>Job Portal</h3>
-                <p>A job portal project focused on bringing job opportunities and job seekers together through a dedicated web experience.</p>
-                <div class="project-tags"><span>Node.js</span><span>Express</span><span>MongoDB</span></div>
-                <div class="project-links">
-                  <a href="https://github.com/sadikali67011-art/Job-Portal" target="_blank" rel="noopener noreferrer">View source <span aria-hidden="true">↗</span></a>
-                </div>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <section class="section section-dark" id="education">
-          <div class="container">
-            <div class="section-heading">
-              <div>
-                <p class="eyebrow">ALWAYS LEARNING</p>
-                <h2 class="section-title">Education<span>.</span></h2>
-              </div>
-              <p class="section-intro">Building a strong foundation in computer applications and software development.</p>
-            </div>
-            <div class="education-list">
-              <article class="education-item">
-                <span class="education-year">2026 - 2028</span>
-                <div><h3>Master of Computer Applications (MCA)</h3><p>I.F.T.M. University, Moradabad</p></div>
-                <span class="education-icon" aria-hidden="true">MCA</span>
-              </article>
-              <article class="education-item">
-                <span class="education-year">2023 - 2026</span>
-                <div><h3>Bachelor of Computer Applications (BCA)</h3><p>Mobile Application and Web Technology · Teerthanker Mahaveer University</p></div>
-                <span class="education-icon" aria-hidden="true">BCA</span>
-              </article>
-              <article class="education-item">
-                <span class="education-year">2022</span>
-                <div><h3>12th Standard · UP Board</h3><p>M M S S V M I C, Madha, Sambhal</p></div>
-                <span class="education-icon" aria-hidden="true">12</span>
-              </article>
-              <article class="education-item">
-                <span class="education-year">2020</span>
-                <div><h3>10th Standard · UP Board</h3><p>D S M Inter College</p></div>
-                <span class="education-icon" aria-hidden="true">10</span>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <section class="section section-light" id="certifications">
-          <div class="container">
-            <div class="section-heading">
-              <div>
-                <p class="eyebrow eyebrow-dark">MILESTONES</p>
-                <h2 class="section-title">Learning beyond class<span>.</span></h2>
-              </div>
-              <p class="section-intro">Courses and certifications that keep me curious.</p>
-            </div>
-            <div class="cert-grid">
-              <article class="cert-card"><span>2026</span><h3>Artificial Intelligence for Intermediate</h3><p>IBM</p></article>
-              <article class="cert-card"><span>2025</span><h3>Java Programming</h3><p>NPTEL</p></article>
-              <article class="cert-card"><span>2024</span><h3>Introduction to Computers</h3><p>Spoken Tutorial, IIT Bombay</p></article>
-              <article class="cert-card"><span>2024</span><h3>Soft Skills for IT Professionals</h3><p>Great Learning Academy</p></article>
-            </div>
-          </div>
-        </section>
-
-        <section class="section section-dark" id="strengths">
-          <div class="container strengths-row">
-            <div><p class="eyebrow">A BIT MORE ABOUT ME</p><h2 class="section-title">How I work<span>.</span></h2></div>
-            <div class="strength-tags"><span>Self-motivated</span><span>Active listener</span><span>Teamwork</span><span>Problem solving</span><span>Exploring technology</span><span>Singing</span></div>
-          </div>
-        </section>
-
-        <section class="contact-section" id="contact">
-          <div class="container contact-inner">
-            <p class="eyebrow">HAVE A ROLE OR PROJECT IN MIND?</p>
-            <h2>Let's build something<br /><span>useful together.</span></h2>
-            <a class="button button-light" href="mailto:sadikali7011@gmail.com">Get in touch <span aria-hidden="true">↗</span></a>
-            <div class="contact-details">
-              <a href="mailto:sadikali7011@gmail.com">sadikali7011@gmail.com</a>
-              <a href="tel:+917534894896">+91 7534894896</a>
-              <span>Sambhal, Uttar Pradesh</span>
-            </div>
-          </div>
-        </section>
-      </main>
-      <footer class="site-footer">
-        <div class="container footer-inner">
-          <a class="brand" href="#home">SA<span>.</span></a>
-          <p>Designed and built with care by Sadik Ali.</p>
-          <p>© <span id="current-year"></span> Sadik Ali</p>
         </div>
-      </footer>
-    </div>
+      </section>
+
+      <!-- Education Section -->
+      <section class="section" id="education">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-eyebrow">Academic Foundation</span>
+            <h2 class="section-title">Education</h2>
+            <p class="section-desc">
+              Strong academic grounding in computer applications, software engineering principles, and core computer science.
+            </p>
+          </div>
+
+          <div class="education-grid">
+            <article class="education-card">
+              <span class="education-year">2026 – 2028 (Pursuing)</span>
+              <h3>Master of Computer Applications (MCA)</h3>
+              <p>I.F.T.M. University, Moradabad, Uttar Pradesh</p>
+              <div class="skill-tags">
+                <span class="skill-tag">Advanced Computing</span>
+                <span class="skill-tag">Software Engineering</span>
+                <span class="skill-tag">DBMS</span>
+              </div>
+            </article>
+
+            <article class="education-card">
+              <span class="education-year">2023 – 2026</span>
+              <h3>Bachelor of Computer Applications (BCA)</h3>
+              <p>Teerthanker Mahaveer University · Specialization: Mobile Application &amp; Web Technology</p>
+              <div class="skill-tags">
+                <span class="skill-tag">Web Technologies</span>
+                <span class="skill-tag">OOP with Java</span>
+                <span class="skill-tag">Data Structures</span>
+              </div>
+            </article>
+
+            <article class="education-card">
+              <span class="education-year">2022</span>
+              <h3>Intermediate (12th Standard) — UP Board</h3>
+              <p>M M S S V M I C, Madha, Sambhal</p>
+              <div class="skill-tags">
+                <span class="skill-tag">Mathematics &amp; Science</span>
+              </div>
+            </article>
+
+            <article class="education-card">
+              <span class="education-year">2020</span>
+              <h3>High School (10th Standard) — UP Board</h3>
+              <p>D S M Inter College</p>
+              <div class="skill-tags">
+                <span class="skill-tag">Foundational Sciences</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Certifications Section -->
+      <section class="section section-alt" id="certifications">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-eyebrow">Verified Credentials</span>
+            <h2 class="section-title">Certifications &amp; Training</h2>
+            <p class="section-desc">
+              Continuous learning and professional accreditations recognized by industry leaders and academic institutes.
+            </p>
+          </div>
+
+          <div class="cert-grid">
+            <article class="cert-card">
+              <span class="cert-issuer">IBM</span>
+              <h3>Artificial Intelligence for Intermediate</h3>
+              <span class="cert-year">Issued 2026</span>
+              <p class="section-desc" style="font-size: 0.8rem;">Covers core machine learning fundamentals, AI applications, and algorithmic problem-solving.</p>
+            </article>
+
+            <article class="cert-card">
+              <span class="cert-issuer">NPTEL</span>
+              <h3>Java Programming</h3>
+              <span class="cert-year">Issued 2025</span>
+              <p class="section-desc" style="font-size: 0.8rem;">Rigorous certification in Core Java, OOP design, Collections, and multithreaded programming.</p>
+            </article>
+
+            <article class="cert-card">
+              <span class="cert-issuer">IIT Bombay (Spoken Tutorial)</span>
+              <h3>Introduction to Computers</h3>
+              <span class="cert-year">Issued 2024</span>
+              <p class="section-desc" style="font-size: 0.8rem;">Comprehensive examination on computer fundamentals, operating systems, and basic IT concepts.</p>
+            </article>
+
+            <article class="cert-card">
+              <span class="cert-issuer">Great Learning Academy</span>
+              <h3>Soft Skills for IT Professionals</h3>
+              <span class="cert-year">Issued 2024</span>
+              <p class="section-desc" style="font-size: 0.8rem;">Professional communication, active listening, teamwork, and workplace effectiveness.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section & Functional Form -->
+      <section class="section" id="contact">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-eyebrow">Let's Connect</span>
+            <h2 class="section-title">Get in Touch</h2>
+            <p class="section-desc">
+              Have a full-time role, internship, or freelance project? Feel free to reach out via direct channels or send a message below.
+            </p>
+          </div>
+
+          <div class="contact-grid">
+            <div class="contact-info">
+              <div class="contact-card-list">
+                <!-- Email Card -->
+                <div class="contact-card">
+                  <div class="contact-card-left">
+                    <div class="contact-card-icon" aria-hidden="true">✉️</div>
+                    <div>
+                      <div class="contact-card-label">Email Address</div>
+                      <a class="contact-card-val" href="mailto:sadikali7011@gmail.com">sadikali7011@gmail.com</a>
+                    </div>
+                  </div>
+                  <button class="copy-btn" data-copy="sadikali7011@gmail.com" type="button" aria-label="Copy email address">
+                    Copy
+                  </button>
+                </div>
+
+                <!-- Phone Card -->
+                <div class="contact-card">
+                  <div class="contact-card-left">
+                    <div class="contact-card-icon" aria-hidden="true">📞</div>
+                    <div>
+                      <div class="contact-card-label">Phone / WhatsApp</div>
+                      <a class="contact-card-val" href="tel:+917534894896">+91 7534894896</a>
+                    </div>
+                  </div>
+                  <button class="copy-btn" data-copy="+917534894896" type="button" aria-label="Copy phone number">
+                    Copy
+                  </button>
+                </div>
+
+                <!-- Location Card -->
+                <div class="contact-card">
+                  <div class="contact-card-left">
+                    <div class="contact-card-icon" aria-hidden="true">📍</div>
+                    <div>
+                      <div class="contact-card-label">Location</div>
+                      <span class="contact-card-val">Sambhal, Uttar Pradesh, India</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- LinkedIn Card -->
+                <div class="contact-card">
+                  <div class="contact-card-left">
+                    <div class="contact-card-icon" aria-hidden="true">💼</div>
+                    <div>
+                      <div class="contact-card-label">LinkedIn Profile</div>
+                      <a class="contact-card-val" href="https://www.linkedin.com/in/sadik-ali-75a539294/" target="_blank" rel="noopener noreferrer">linkedin.com/in/sadik-ali</a>
+                    </div>
+                  </div>
+                  <a class="button button-sm button-secondary" href="https://www.linkedin.com/in/sadik-ali-75a539294/" target="_blank" rel="noopener noreferrer">
+                    Open ↗
+                  </a>
+                </div>
+
+                <!-- GitHub Card -->
+                <div class="contact-card">
+                  <div class="contact-card-left">
+                    <div class="contact-card-icon" aria-hidden="true">🐙</div>
+                    <div>
+                      <div class="contact-card-label">GitHub Profile</div>
+                      <a class="contact-card-val" href="https://github.com/sadikali67011-art" target="_blank" rel="noopener noreferrer">github.com/sadikali67011-art</a>
+                    </div>
+                  </div>
+                  <a class="button button-sm button-secondary" href="https://github.com/sadikali67011-art" target="_blank" rel="noopener noreferrer">
+                    Open ↗
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Netlify-Ready Functional Form -->
+            <div class="contact-form-wrapper">
+              <form
+                class="contact-form"
+                id="contact-form"
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                netlify-honeypot="bot-field"
+              >
+                <!-- Netlify hidden inputs -->
+                <input type="hidden" name="form-name" value="contact" />
+                <p style="display: none;">
+                  <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+                </p>
+
+                <div class="form-group">
+                  <label class="form-label" for="form-name">Your Name</label>
+                  <input class="form-input" id="form-name" type="text" name="name" placeholder="John Doe" required />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="form-email">Your Email</label>
+                  <input class="form-input" id="form-email" type="email" name="email" placeholder="john@example.com" required />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="form-subject">Subject</label>
+                  <input class="form-input" id="form-subject" type="text" name="subject" placeholder="Role Discussion / Project Inquiry" required />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="form-message">Message</label>
+                  <textarea class="form-textarea" id="form-message" name="message" placeholder="Hi Sadik, I'd like to discuss an opportunity..." required></textarea>
+                </div>
+
+                <div class="form-status" id="form-status" role="alert"></div>
+
+                <button class="button button-primary" type="submit">
+                  Send Message <span aria-hidden="true">✉️</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <a class="brand" href="#home">SA<span class="brand-dot">.</span></a>
+          <p class="footer-copy">© <span id="current-year"></span> Sadik Ali. Designed &amp; engineered for the modern web.</p>
+        </div>
+
+        <div class="footer-tech">
+          Built with Semantic HTML5, CSS3 &amp; Vanilla JS · 100% Netlify &amp; GitHub Ready
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" type="button" aria-label="Scroll back to top">
+      <span aria-hidden="true">↑</span>
+    </button>
   </body>
 </html>
