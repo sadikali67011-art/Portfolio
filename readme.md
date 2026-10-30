@@ -1,6 +1,6 @@
 # Sadik Ali — Software Developer Portfolio
 
-A modern, responsive, job-ready personal portfolio and interactive resume designed for software engineering and web development opportunities. Built with pure **HTML5, CSS3, and vanilla JavaScript (ES6+)** with **zero build steps or external package dependencies**, ensuring 100% reliable deployment on **Netlify** and **GitHub Pages**.
+A personal portfolio for Sadik Ali, an MCA student learning software and web development. The site and printable resume are built with HTML, CSS, and JavaScript, with no build step or package dependencies.
 
 ---
 
@@ -108,7 +108,7 @@ git push origin main
 ---
 
 ## 📄 Printable Resume
-Visit `/resume/` on the live site or open `resume/index.html`. Click **"Save as PDF / Print"** to generate a clean, ATS-compliant single/two-page PDF resume ready for job applications.
+Visit `/resume/` on the live site or open `resume/index.html`. Click **"Save as PDF / Print"** to generate a clean, text-based, ATS-friendly A4 resume PDF. The resume is formatted to remain at least one page when printed.
 
 ---
 

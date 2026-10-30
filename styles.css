@@ -79,6 +79,7 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 88px;
   font-size: 16px;
+  overflow-x: clip;
 }
 
 body {
@@ -143,6 +144,12 @@ a {
   color: inherit;
   text-decoration: none;
   transition: var(--transition);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--teal);
+  outline-offset: 3px;
 }
 
 button {
@@ -493,6 +500,7 @@ img {
   display: flex;
   flex-direction: column;
   gap: 22px;
+  animation: hero-enter 650ms ease-out both;
 }
 
 .hero-title {
@@ -569,6 +577,10 @@ img {
   -webkit-text-fill-color: transparent;
 }
 
+[data-theme="light"] .stat-value {
+  background-image: linear-gradient(135deg, #334155 0%, #0f172a 100%);
+}
+
 .stat-label {
   font-size: 0.74rem;
   color: var(--text-subtle);
@@ -624,6 +636,18 @@ img {
   position: relative;
   display: grid;
   place-items: center;
+  animation: hero-enter 750ms 120ms ease-out both;
+}
+
+@keyframes hero-enter {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .avatar-wrapper {
@@ -648,7 +672,8 @@ img {
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
-  object-position: center 25%;
+  object-position: 54% 25%;
+  filter: saturate(1.04) contrast(1.02);
   border: 4px solid var(--bg-primary);
   background: #1e293b;
 }
@@ -1446,6 +1471,17 @@ img {
   box-shadow: var(--shadow-sm);
 }
 
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 550ms ease, transform 550ms ease;
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .cert-issuer {
   font-family: var(--font-mono);
   font-size: 0.76rem;
@@ -2002,6 +2038,7 @@ img {
     transform: translateX(50%);
     bottom: -20px;
     width: 90%;
+    animation-name: float-badge-centered;
   }
   .resume-sheet {
     padding: 28px 20px;
@@ -2011,6 +2048,22 @@ img {
   }
   .resume-actions .button {
     width: 100%;
+  }
+}
+
+@keyframes float-badge-centered {
+  0%, 100% { transform: translateX(50%) translateY(0); }
+  50% { transform: translateX(50%) translateY(6px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
 
@@ -2025,6 +2078,7 @@ img {
   body, .resume-body {
     background: #ffffff !important;
     color: #000000 !important;
+    font-family: Arial, Helvetica, sans-serif !important;
   }
   .ambient-glow, .orbit-ring {
     display: none !important;
@@ -2035,14 +2089,20 @@ img {
   .resume-actions, .site-header, .site-footer, .back-to-top, .toast-notice {
     display: none !important;
   }
+  .reveal-on-scroll {
+    opacity: 1 !important;
+    transform: none !important;
+  }
   .resume-sheet {
     box-shadow: none !important;
     padding: 0 !important;
     max-width: 100% !important;
     font-size: 9.5pt !important;
     line-height: 1.35 !important;
+    color: #000000 !important;
   }
   .resume-header {
+    text-align: left !important;
     padding-bottom: 8px !important;
     border-bottom: 2px solid #000 !important;
   }
@@ -2052,7 +2112,41 @@ img {
   }
   .resume-role {
     font-size: 11pt !important;
-    color: #333 !important;
+    color: #000 !important;
+  }
+  .resume-contact-bar,
+  .resume-links-bar {
+    justify-content: flex-start !important;
+    font-size: 8.5pt !important;
+    gap: 4px 12px !important;
+  }
+  .resume-contact-bar a,
+  .resume-links-bar a,
+  .resume-company,
+  .resume-date,
+  .resume-tech {
+    color: #000000 !important;
+  }
+  .resume-section-title {
+    color: #000000 !important;
+    letter-spacing: 0 !important;
+  }
+  .resume-entry-heading {
+    color: #000000 !important;
+  }
+  .resume-bullets,
+  .resume-cert-list,
+  .resume-skills-grid,
+  .resume-text {
+    color: #000000 !important;
+  }
+  .resume-bullets li::marker,
+  .resume-cert-list li::marker {
+    color: #000000 !important;
+  }
+  a {
+    color: #000000 !important;
+    text-decoration: none !important;
   }
   .resume-section {
     margin-top: 10px !important;
@@ -2071,9 +2165,5 @@ img {
   }
   .resume-bullets, .resume-cert-list {
     gap: 2px !important;
-  }
-  a {
-    color: #000 !important;
-    text-decoration: none !important;
   }
 }

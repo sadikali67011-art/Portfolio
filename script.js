@@ -15,11 +15,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const typewriterEl = document.querySelector("#typewriter");
   if (typewriterEl) {
     const words = [
-      "Software Developer",
-      "Java & Python Enthusiast",
-      "Full Stack Web Engineer",
-      "MCA Student @ I.F.T.M.",
-      "Clean Code Practitioner"
+      "MCA Student",
+      "Learning Java & Python",
+      "Building Web Projects"
     ];
     let wordIndex = 0;
     let charIndex = 0;
@@ -323,5 +321,27 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
       toast.classList.remove("show");
     }, 2800);
+  }
+
+  // Reveal portfolio cards as they enter the viewport.
+  const revealItems = document.querySelectorAll(
+    ".section-header, .skill-card, .project-card, .education-card, .cert-card"
+  );
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if ("IntersectionObserver" in window && !reduceMotion) {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -32px 0px" });
+
+    revealItems.forEach((item) => {
+      item.classList.add("reveal-on-scroll");
+      revealObserver.observe(item);
+    });
   }
 });
