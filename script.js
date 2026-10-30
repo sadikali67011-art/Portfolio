@@ -1,6 +1,7 @@
 /**
  * Sadik Ali — Software Developer Portfolio
  * Vanilla JavaScript (ES6+), Zero External Dependencies, Accessible & Fast
+ * Enhanced with Dynamic Typewriter, Ambient Spotlight & Smooth Interactions
  */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -10,7 +11,50 @@ document.addEventListener("DOMContentLoaded", () => {
     yearEl.textContent = new Date().getFullYear();
   }
 
-  // 2. Theme Toggle (Dark / Light Mode)
+  // 2. Dynamic Typewriter Effect in Hero Section
+  const typewriterEl = document.querySelector("#typewriter");
+  if (typewriterEl) {
+    const words = [
+      "Software Developer",
+      "Java & Python Enthusiast",
+      "Full Stack Web Engineer",
+      "MCA Student @ I.F.T.M.",
+      "Clean Code Practitioner"
+    ];
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typingSpeed = 90;
+
+    function typeEffect() {
+      const currentWord = words[wordIndex];
+
+      if (isDeleting) {
+        typewriterEl.textContent = currentWord.substring(0, charIndex - 1);
+        charIndex--;
+        typingSpeed = 45;
+      } else {
+        typewriterEl.textContent = currentWord.substring(0, charIndex + 1);
+        charIndex++;
+        typingSpeed = 90;
+      }
+
+      if (!isDeleting && charIndex === currentWord.length) {
+        typingSpeed = 2200; // Pause at end of word
+        isDeleting = true;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+        typingSpeed = 400; // Pause before new word
+      }
+
+      setTimeout(typeEffect, typingSpeed);
+    }
+
+    typeEffect();
+  }
+
+  // 3. Theme Toggle (Dark / Light Mode)
   const themeToggleBtn = document.querySelector("#theme-toggle");
   const root = document.documentElement;
   
@@ -39,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // 3. Mobile Navigation Menu
+  // 4. Mobile Navigation Menu
   const menuButton = document.querySelector(".menu-toggle");
   const navLinks = document.querySelector(".nav-links");
 
@@ -78,13 +122,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // 4. Active Nav Item Highlighting on Scroll (ScrollSpy)
+  // 5. Active Nav Item Highlighting on Scroll (ScrollSpy)
   const sections = document.querySelectorAll("section[id]");
   const navAnchorLinks = document.querySelectorAll(".nav-links a[href^='#']");
 
   window.addEventListener("scroll", () => {
     let current = "";
-    const scrollPosition = window.pageYOffset + 120;
+    const scrollPosition = window.pageYOffset + 140;
 
     sections.forEach((section) => {
       const sectionTop = section.offsetTop;
@@ -102,7 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }, { passive: true });
 
-  // 5. Skills Category Filter
+  // 6. Skills Category Filter
   const skillFilterBtns = document.querySelectorAll(".skills-filter-bar .filter-btn");
   const skillCards = document.querySelectorAll(".skill-card");
 
@@ -125,7 +169,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 6. Projects Category Filter
+  // 7. Projects Category Filter
   const projectFilterBtns = document.querySelectorAll(".projects-filter-bar .filter-btn");
   const projectCards = document.querySelectorAll(".project-card");
 
@@ -148,7 +192,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 7. Interactive Live Code Showcase (Java, Python, JavaScript)
+  // 8. Interactive Live Code Showcase (Java, Python, JavaScript)
   const codeTabBtns = document.querySelectorAll(".code-tab-btn");
   const codePanels = document.querySelectorAll(".code-panel");
   const codeCopyBtn = document.querySelector("#copy-code-btn");
@@ -188,7 +232,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 8. Contact Form Handling (Netlify & Fallback)
+  // 9. Contact Form Handling (Netlify & Fallback)
   const contactForm = document.querySelector("#contact-form");
   const formStatus = document.querySelector("#form-status");
 
@@ -231,7 +275,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 9. Quick Copy to Clipboard (Email & Phone)
+  // 10. Quick Copy to Clipboard (Email & Phone)
   const copyButtons = document.querySelectorAll(".copy-btn");
   copyButtons.forEach((btn) => {
     btn.addEventListener("click", () => {
@@ -249,7 +293,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // 10. Back to Top Button
+  // 11. Back to Top Button
   const backToTopBtn = document.querySelector("#back-to-top");
   if (backToTopBtn) {
     window.addEventListener("scroll", () => {
@@ -265,7 +309,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 11. Toast Notice Function
+  // 12. Toast Notice Function
   function showToast(message) {
     let toast = document.querySelector("#toast-notice");
     if (!toast) {
