@@ -33,7 +33,7 @@ import {
 } from "react-icons/si";
 
 export const profileLink = "https://www.linkedin.com/in/sadik-ali-75a539294/";
-export const repoLink = "https://github.com/sadikali7011-art";
+export const repoLink = "https://github.com/sadikali67011-art";
 export const callToAction = profileLink;
 
 export const navLinks = [

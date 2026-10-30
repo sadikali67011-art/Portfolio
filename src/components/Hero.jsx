@@ -37,13 +37,21 @@ const Hero = () => (
             </a>
           ))}
         </div>
-        <button
-          type="button"
-          onClick={() => scrollToSection("contactMe")}
-          className="mt-8 w-fit rounded bg-blue-gradient px-5 py-3 font-poppins font-medium text-primary"
-        >
-          Contact Me
-        </button>
+        <div className="flex flex-wrap gap-4 mt-8">
+          <button
+            type="button"
+            onClick={() => scrollToSection("contactMe")}
+            className="w-fit rounded bg-blue-gradient px-5 py-3 font-poppins font-medium text-primary"
+          >
+            Contact Me
+          </button>
+          <a
+            href="/resume"
+            className="w-fit rounded border border-teal-200 px-5 py-3 font-poppins font-medium text-teal-100 hover:bg-teal-200 hover:text-primary"
+          >
+            View / Download Resume
+          </a>
+        </div>
       </div>
       <div className="flex-1 flex justify-center items-center mt-10 md:mt-0">
         <div className="w-[280px] h-[360px] sm:w-[340px] sm:h-[440px] overflow-hidden rounded-[32px] border-4 border-teal-400 shadow-[0_0_60px_rgba(0,255,255,0.18)]">

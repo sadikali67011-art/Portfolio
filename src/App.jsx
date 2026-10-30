@@ -13,8 +13,9 @@ import {
   Certifications,
   PersonalDetails,
 } from "./components";
+import Resume from "./components/Resume";
 
-const App = () => {
+const Portfolio = () => {
   const [isLoading, setIsLoading] = React.useState(true);
 
   React.useEffect(() => {
@@ -72,5 +73,12 @@ const App = () => {
     </div>
   );
 };
+
+const App = () =>
+  window.location.pathname.replace(/\/+$/, "") === "/resume" ? (
+    <Resume />
+  ) : (
+    <Portfolio />
+  );
 
 export default App;

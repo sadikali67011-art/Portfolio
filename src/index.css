@@ -209,3 +209,159 @@
   -webkit-line-clamp: 2; /* number of lines to show */
   -webkit-box-orient: vertical;
 }
+
+.resume-page {
+  min-height: 100vh;
+  padding: 24px;
+  background: #e8edf2;
+  color: #17212b;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.resume-actions {
+  display: flex;
+  justify-content: space-between;
+  max-width: 850px;
+  margin: 0 auto 16px;
+}
+
+.resume-back,
+.resume-print {
+  border: 0;
+  border-radius: 6px;
+  padding: 10px 14px;
+  background: #102a43;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  text-decoration: none;
+}
+
+.resume-sheet {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 44px 52px;
+  background: #fff;
+  box-shadow: 0 8px 28px rgb(16 42 67 / 12%);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.resume-header {
+  padding-bottom: 14px;
+  border-bottom: 2px solid #168b91;
+  text-align: center;
+}
+
+.resume-header h1 {
+  margin: 0;
+  color: #102a43;
+  font-size: 30px;
+}
+
+.resume-role {
+  margin: 2px 0 6px;
+  color: #168b91;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.resume-contact {
+  margin: 3px 0;
+}
+
+.resume-contact a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.resume-section {
+  margin-top: 15px;
+}
+
+.resume-section h2 {
+  margin: 0 0 6px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #ccd6df;
+  color: #102a43;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.resume-section p {
+  margin: 3px 0;
+}
+
+.resume-entry {
+  margin-top: 7px;
+  break-inside: avoid;
+}
+
+.resume-entry-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.resume-entry-heading span,
+.resume-muted {
+  color: #526575;
+}
+
+.resume-entry ul,
+.resume-certifications {
+  margin: 4px 0 0;
+  padding-left: 18px;
+}
+
+.resume-skills p {
+  margin: 3px 0;
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 12mm;
+  }
+
+  body {
+    background: #fff;
+  }
+
+  .resume-page {
+    min-height: auto;
+    padding: 0;
+    background: #fff;
+  }
+
+  .resume-actions {
+    display: none;
+  }
+
+  .resume-sheet {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    font-size: 10pt;
+    line-height: 1.35;
+  }
+
+  .resume-header h1 {
+    font-size: 23pt;
+  }
+
+  .resume-section {
+    margin-top: 10px;
+  }
+
+  .resume-section h2 {
+    font-size: 11pt;
+  }
+
+  a {
+    color: inherit !important;
+    text-decoration: none;
+  }
+}
